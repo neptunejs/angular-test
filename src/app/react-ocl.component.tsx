@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, Input } from '@angular/core';
+import { Component, OnChanges, ElementRef, Input } from '@angular/core';
 import {render} from 'react-dom';
 import * as React from 'react';
 const {SvgRenderer} = require('react-ocl');
@@ -8,7 +8,7 @@ const OCL = require('openchemlib/minimal');
   selector: 'react-ocl',
   template: `<div></div>`,
 })
-export class ReactOclComponent implements OnInit {
+export class ReactOclComponent implements OnChanges {
   nativeElement: Element;
   @Input() smiles: string;
 
@@ -16,7 +16,7 @@ export class ReactOclComponent implements OnInit {
     this.nativeElement = element.nativeElement;
   }
 
-  ngOnInit() {
+  ngOnChanges() {
     const reactDiv: any = this.nativeElement.firstChild;
     render(<SvgRenderer OCL={OCL} smiles={this.smiles} />, reactDiv);
   }

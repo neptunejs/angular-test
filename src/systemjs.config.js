@@ -31,6 +31,7 @@
       'react-mf': 'npm:react-mf',
       'react-ocl': 'npm:react-ocl',
       'openchemlib/minimal': 'npm:openchemlib/dist/openchemlib-minimal.js',
+      'openchemlib/full': 'npm:openchemlib/dist/openchemlib-full.js',
       'lodash.uniqueid': 'npm:lodash.uniqueid/index.js'
     },
     // packages tells the System loader how to load when no filename and/or no extension
